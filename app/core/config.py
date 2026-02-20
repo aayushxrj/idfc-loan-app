@@ -19,7 +19,7 @@ class Settings(BaseSettings):
 
     # ── Model + collection names ──────────────────────────────────────────────
     LOAN_MODEL_PATH:   str = "models/risk_model.pkl"
-    POLICY_COLLECTION: str = "Random Policy Docs"
+    POLICY_COLLECTION: str = "Random_Policy_Docs"
 
     class Config:
         env_file = ".env"

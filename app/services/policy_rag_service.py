@@ -84,7 +84,7 @@ def _ensure_schema() -> None:
                     Property(name="policyYear",       data_type=DataType.TEXT),
                     Property(name="clause",           data_type=DataType.TEXT),
                 ],
-                vectorizer_config=Configure.Vectorizer.none(),  # We supply own OpenAI vectors
+                vector_config=Configure.Vectorizer.none(),  # We supply own OpenAI vectors
             )
             logger.info("LoanPolicy collection created in Weaviate.")
     finally:

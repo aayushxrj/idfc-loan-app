@@ -25,3 +25,30 @@ http://localhost:8000/api/docs
 
 ## Health Check
 http://localhost:8000/health
+
+
+## Commands to run
+
+```
+ python -c "from app.core import settings; print('O_O', settings.APP_NAME)"
+```
+
+```
+ python -c "from app.services.embedding_service import embed_texts; print('✅ Vector length:', len(embed_texts('test')))"
+```
+
+```
+ python -c "from app.services.embedding_service import embed_text; print('✅ Vector length:', len(embed_text('test')))"
+```
+
+```
+ python -c "from app.services.embedding_service import embed_texts; print('✅ Vector length:', len(embed_texts(['test','the','dog','mumbai'])))"
+```
+
+```
+ python -c "from app.services.embedding_service import embed_texts; print('✅ Vector length:', embed_texts(['test','the','dog','mumbai']))"
+```
+
+```
+python -c "from app.services.policy_rag_service import seed; print('✅ Seeded:', seed())"
+```
