@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+openai
+weaviate-client
+scikit-learn
+pandas
+numpy
+joblib
+python-multipart
