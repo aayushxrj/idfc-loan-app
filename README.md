@@ -52,3 +52,14 @@ http://localhost:8000/health
 ```
 python -c "from app.services.policy_rag_service import seed; print('✅ Seeded:', seed())"
 ```
+```
+python -c "from app.services.policy_rag_service import retrieve; r = retrieve('home loan'); print('✅ retrieve:', len(r), 'results'); print(r[0]['policy_id'] if r else 'No results')"
+```
+
+```
+python -c "from app.services.policy_rag_service import retrieve; r = retrieve('home loan', loan_type='home_loan', cibil_score=720); print('✅ filtered retrieve:', len(r), 'results'); print(r[0] if r else 'No results')"
+```
+
+```
+python -c "from app.services.policy_rag_service import check_faithfulness; f = check_faithfulness('Per policy RBI-HL-001, CIBIL 700+ required', 'Home loan applicants with CIBIL 700+ eligible'); print('✅ faithfulness:', f['faithfulness_score'], f['verdict'])"
+```
